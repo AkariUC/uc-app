@@ -11,6 +11,7 @@ services:
     volumes:
       - ./docker/mysql/access.cnf:/home/access.cnf
       - ./docker/mysql/wait.sh:/home/wait.sh
+      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
     environment:
         MYSQL_DATABASE: root
         MYSQL_ROOT_PASSWORD: password
